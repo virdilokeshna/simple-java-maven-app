@@ -23,14 +23,11 @@ pipeline {
             }
         }
         stage('scan') {
-            tools{
-                sonar 'sonarqube'
-            }
+           
             steps {
                 
                 sh 'mvn sonar:sonar \
-                    -Dsonar.host.url=http://sonarqubeprac.eastus2.cloudapp.azure.com:9000 \
-                    -Dsonar.login=01bdceba9b6d1affb894339a049fec80be690eec'
+                    -Dsonar.host.url=http://sonarqubeprac.eastus2.cloudapp.azure.com:9000 '
 
             }
         }
