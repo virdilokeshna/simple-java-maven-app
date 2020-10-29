@@ -27,7 +27,8 @@ pipeline {
             steps {
                 
                 sh 'mvn sonar:sonar \
-                    -Dsonar.host.url=http://sonarqubeprac.eastus2.cloudapp.azure.com:9000 '
+                    -Dsonar.host.url=http://40.76.90.228 \ 
+                    -Dsonar.login=dc89f8dv08920ff1fb37c8a9b0712c96c1a3a857'
 
             }
         }
