@@ -19,7 +19,14 @@ pipeline {
                 //sh 'docker --version'
                 echo 'Build start'
                 //sh 'mvn -B -DskipTests clean package'
-                sh 'mvn build'
+                sh 'mvn complie'
+            }
+        }
+        stage('scan') {
+            
+            steps {
+                
+                sh 'mvn sonar:sonar'
             }
         }
     }

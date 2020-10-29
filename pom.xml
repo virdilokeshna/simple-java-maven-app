@@ -16,12 +16,21 @@
     </dependency>
   </dependencies>
   <build>
-    <plugins>
-      <plugin>
+     <plugins>
+         <plugin>
         <!-- Build an executable JAR -->
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
         <version>3.0.2</version>
+        <!-- <executions>
+        <execution>
+          <id>run</id>
+          <phase>clean</phase>
+          <goals>
+          <goal>run</goal>
+          </goals>
+          </execution>
+        </executions> -->
         <configuration>
           <archive>
             <manifest>
@@ -31,7 +40,27 @@
             </manifest>
           </archive>
         </configuration>
+        
+      </plugin>
+      <plugin>
+        <groupId>org.sonarsource.scanner.maven</groupId>
+        <artifactId>sonar-maven-plugin</artifactId>
+        <version>3.6.1.1688</version>
       </plugin>
     </plugins>
+  
   </build>
+  <profiles>
+  <profile>
+  <id>coverage</id>
+  <activation>
+<activeByDefault>true</activeByDefault>
+ 
+   </activation>
+   <properties>
+   <sonar.host.url>http://sonarqubeprac.eastus2.cloudapp.azure.com:9000</sonar.host.url> 
+   <sonar.login>ade5d0cc09d7d8d8795335fee19e8d9b3405accd</sonar.login>
+   </properties>
+  </profile>
+</profiles>
 </project>
