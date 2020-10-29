@@ -19,7 +19,7 @@ pipeline {
                 //sh 'docker --version'
                 echo 'Build start'
                 //sh 'mvn -B -DskipTests clean package'
-                sh 'mvn compile'
+                sh 'mvn build'
             }
         }
     }
