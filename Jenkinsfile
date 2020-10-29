@@ -1,6 +1,8 @@
 pipeline {
     agent any
-   
+   tools{
+       sonar 'sonarqube'
+   }
     /*agent {
         docker {
             image 'maven:3-alpine'
