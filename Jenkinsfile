@@ -1,8 +1,6 @@
 pipeline {
     agent any
-   tools{
-       sonar 'sonarqube'
-   }
+   
     /*agent {
         docker {
             image 'maven:3-alpine'
@@ -28,7 +26,10 @@ pipeline {
             
             steps {
                 
-                sh 'mvn sonar:sonar'
+                sh 'mvn sonar:sonar \
+    -Dsonar.host.url=http://sonarqubeprac.eastus2.cloudapp.azure.com:9000 \
+  -Dsonar.login=01bdceba9b6d1affb894339a049fec80be690eec'
+
             }
         }
     }
