@@ -58,8 +58,8 @@
  
    </activation>
    <properties>
-   <sonar.host.url>http://sonarqubeprac.eastus2.cloudapp.azure.com:9000</sonar.host.url> 
-   <sonar.login>ade5d0cc09d7d8d8795335fee19e8d9b3405accd</sonar.login>
+   <sonar.host.url>http://sonarqube001.eastus.cloudapp.azure.com</sonar.host.url> 
+   <sonar.login>dc89f8db08920ff1fb37c8a9b0712c96c1a3a857</sonar.login>
    </properties>
   </profile>
 </profiles>
